@@ -2,6 +2,7 @@ package co.edu.uniquindio.poo;
 
 import java.util.Collection;
 import java.util.Comparator;
+import java.util.LinkedList;
 import java.util.function.Predicate;
 
 public class Finca {
@@ -13,8 +14,9 @@ public class Finca {
     private Collection<Empleado> empleados;
 
     public Finca (String nombre){
-        assert nombre != null && nombre.isBlank():"El nombre de la finca es requerido";
+        assert nombre != null && !nombre.isBlank():"El nombre de la finca es requerido";
         this.nombre = nombre;
+        this.empleados = new LinkedList<>();
     }
 
     public Collection<EmpleadoTiempoParcial> listarEmpleadosTiempoParcial(){

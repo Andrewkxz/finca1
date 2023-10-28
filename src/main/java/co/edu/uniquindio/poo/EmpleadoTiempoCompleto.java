@@ -5,6 +5,7 @@ public class EmpleadoTiempoCompleto extends Empleado{
 
     public EmpleadoTiempoCompleto(String nombre, String cargo, int salario) {
         super(nombre, cargo);
+        assert salario != 0 && salario > 0: "El salario es requerido";
         this.salario = salario;
     }
 
